@@ -1,4 +1,5 @@
 import requests
+from time import sleep as uyku
 
 url = input("Aratmak istediğiniz urlyi yazınız.\nÖrnek: vulnwebsite.com\nUrl giriniz: ")
 
@@ -246,8 +247,8 @@ for payload in urlekleri:
     sonuc = requests.get(url=urls)
     if str(payload) in str(sonuc.content):
         print("Potansiyel Admin Logini:", str(payload))
-        time.sleep(1)
+        uyku(1)
      
     else:
         print("Bu URL çalışmadı: ", payload)
-        time.sleep(1)
+        uyku(1)
